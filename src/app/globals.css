@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #1a3a2a;
+    --color-forest-mid: #2d5a40;
+    --color-forest-light: #4a8a5e;
+    --color-amber: #c8760a;
+    --color-amber-light: #e8920f;
+    --color-stone: #f5f0eb;
+    --color-bark: #6b4c2e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-green-900 font-semibold px-6 py-3 rounded-lg border-2 border-white transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-green-800 text-green-800 hover:bg-green-800 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .section-label {
+    @apply text-amber-600 font-semibold text-sm uppercase tracking-widest;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200;
+  }
+}
